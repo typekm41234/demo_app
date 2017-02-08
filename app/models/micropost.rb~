@@ -1,0 +1,4 @@
+class Micropost < ActiveRecord::Base
+  validate :content, length: {max: 140}
+  validate :user, :presence => true
+end
